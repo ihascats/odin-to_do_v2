@@ -1,5 +1,5 @@
 class Task{
-    constructor (id = 0, title = "", description = "", dueDate = 'dd/mm/yyyy', priority = 0, checkList = [], note = ""){
+    constructor (id = 0, title = "", description = "", dueDate = 'dd/mm/yyyy', priority = 0, checkList = {}, note = ""){
         this.id = id;
         this.title = title;
         this.description = description;
@@ -32,9 +32,14 @@ class Task{
     changeCheckList(newCheckList){
         this.checkList = newCheckList;
     }
-    
+
     changeNote(newNote){
         this.note = newNote;
+    }
+
+    newListItem(task, status){
+        let id = Object.keys(this.checkList).length;
+        this.checkList[id] = [task, status];
     }
     
 }

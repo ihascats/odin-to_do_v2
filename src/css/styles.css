@@ -66,3 +66,24 @@ input, textarea {
     font-size: 16px;
     resize: none;
 }
+
+.checkList {
+    display: grid;
+    gap: 8px;
+}
+
+li {
+    display: grid;
+    grid-template-columns:min-content 1fr;
+    list-style: none;
+    gap: 4px;
+}
+
+li > button {
+    height: 26px;
+    width: 26px;
+}
+
+ul > div > input {
+    text-align: center;
+}
