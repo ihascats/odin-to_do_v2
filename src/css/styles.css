@@ -91,3 +91,10 @@ ul > div > input {
 input:disabled {
     background-color: #aea2c0;
 }
+
+li > button {
+    border: none;
+    border-radius: 2px;
+    background-color: #e6d9ff;
+    font-weight: 900;
+}

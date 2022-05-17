@@ -21,7 +21,7 @@ class Task{
         this.description = newDescription;
     }
 
-    changeDueDate(newDueDate){
+    changeDuedate(newDueDate){
         this.dueDate = newDueDate;
     }
 
@@ -29,7 +29,7 @@ class Task{
         this.priority = newPriority;
     }
 
-    changeCheckList(newCheckList){
+    changeChecklist(newCheckList){
         this.checkList = newCheckList;
     }
 
