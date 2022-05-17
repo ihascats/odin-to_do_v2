@@ -98,3 +98,24 @@ li > button {
     background-color: #e6d9ff;
     font-weight: 900;
 }
+
+.projects {
+    display: grid;
+}
+
+.projects > button {
+    width: 100%;
+    letter-spacing: 1px;
+    font-weight: bold;
+    font-size: 16px;
+    border: none;
+    background-color: #9886b6;
+    height: 32px;
+}
+
+.projects > button:hover {
+    background-color: #776c94;
+}
+.projects > button:active {
+    background-color: #b0a1d8;
+}
