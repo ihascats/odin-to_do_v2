@@ -1,10 +1,14 @@
 function displayStatus(item){
-    if (item.firstElementChild.classList.contains('true')){
-        item.firstElementChild.textContent = 'X';
-        item.lastElementChild.setAttribute('style', 'text-decoration: line-through');
+    const button = item.firstElementChild;
+    const input = item.lastElementChild;
+    if (button.classList.contains('true')){
+        button.textContent = 'X';
+        input.setAttribute('style', 'text-decoration: line-through');
+        input.disabled = true;
     } else {
-        item.firstElementChild.textContent = '';
-        item.lastElementChild.setAttribute('style', '');
+        button.textContent = '';
+        input.setAttribute('style', '');
+        input.disabled = false;
     }
 }
 

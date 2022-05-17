@@ -87,3 +87,7 @@ li > button {
 ul > div > input {
     text-align: center;
 }
+
+input:disabled {
+    background-color: #aea2c0;
+}
