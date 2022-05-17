@@ -1,4 +1,5 @@
-import { newListItem, listItemGenerator } from "./create.newListItem";
+import {newListItem, listItemGenerator } from "./create.newListItem";
+import displayStatus from "./display.list-item-status";
 
 function displayTaskInformation(task){
     Object.keys(task).forEach(key => {
@@ -19,11 +20,14 @@ function displayTaskInformation(task){
 
 function displayCheckList(checkList, element){
     Object.keys(checkList).forEach(key =>{
-        console.log(key);
-        console.log(checkList[key][0]);
-        console.log(checkList[key][1]);
-        const listItem = newListItem(key, checkList[key][1], checkList[key][0]);
+        let id = key;
+        let text = checkList[key][0];
+        let status = checkList[key][1];
+        const listItem = newListItem(id, status, text);
         element.appendChild(listItem)
+        if (status){
+            displayStatus(listItem)
+        }
     })
 }
 
