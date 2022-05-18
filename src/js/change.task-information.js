@@ -1,5 +1,4 @@
 function changeTaskInformation(task){
-    console.log(task['change'+'Title']);
     const inputElements = document.querySelectorAll('input');
 
     let classes = []
