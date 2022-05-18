@@ -7,6 +7,7 @@ function displayBundleTaskInformation(info){
     projectsSelector.onclick = (event) => {
 
         let selectedProject = displayProjectTasks(event, info, projectsSelector);
+        let selectedProjectEvent = event;
         projectsSelector.onclick = (event) => {
             let button = event.target.closest('button');
             if (!button || button == null) return
@@ -19,6 +20,7 @@ function displayBundleTaskInformation(info){
             })
             document.querySelector('.task').oninput = () =>{
                 changeTaskInformation(selectedTask);
+                selectedProject = displayProjectTasks(selectedProjectEvent, info, projectsSelector);
             }
         }
     };

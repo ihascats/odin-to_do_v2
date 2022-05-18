@@ -22,8 +22,6 @@ function changeTaskInformation(task){
             task['change'+`${capitalized}`](itemValue)
         }
     })
-
-    console.log(task)
 }
 
 export default changeTaskInformation
