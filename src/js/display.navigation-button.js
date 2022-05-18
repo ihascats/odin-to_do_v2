@@ -1,4 +1,5 @@
 import displayBundleTaskInformation from "./display-bundle.task-information";
+import newProjectButton from "./display.new-project-button";
 import displayProjects from "./display.projects";
 
 function navigationButton(projectsSelector, info){
@@ -10,7 +11,8 @@ function navigationButton(projectsSelector, info){
         }
         info.projects.forEach(project => {
             displayProjects(project);
-        })
+        });
+        newProjectButton(info, projectsSelector)
         button.textContent = "PROJECTS";
         button.classList.toggle('return');
         displayBundleTaskInformation(info)
