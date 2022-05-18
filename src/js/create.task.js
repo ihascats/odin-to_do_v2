@@ -29,8 +29,8 @@ class Task{
         this.priority = newPriority;
     }
 
-    changeChecklist(newCheckList){
-        this.checkList = newCheckList;
+    changeChecklist(id, task, status){
+        this.checkList[id] = [task, status];
     }
 
     changeNote(newNote){

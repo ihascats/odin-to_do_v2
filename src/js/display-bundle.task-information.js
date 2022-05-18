@@ -22,6 +22,11 @@ function displayBundleTaskInformation(info){
                 changeTaskInformation(selectedTask);
                 selectedProject = displayProjectTasks(selectedProjectEvent, info, projectsSelector);
             }
+            document.querySelector('.task').onclick = () =>{
+                changeTaskInformation(selectedTask);
+                selectedProject = displayProjectTasks(selectedProjectEvent, info, projectsSelector);
+            }
+
         }
     };
 }

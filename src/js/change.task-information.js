@@ -22,6 +22,15 @@ function changeTaskInformation(task){
             task['change'+`${capitalized}`](itemValue)
         }
     })
+
+    const checkListItemElements = document.querySelectorAll('li');
+    
+    checkListItemElements.forEach(element => {
+        let id = element.classList[0];
+        let text = element.lastElementChild.value;
+        let status = element.firstElementChild.classList[0];
+        task.changeChecklist(id, text, status);
+    })
 }
 
 export default changeTaskInformation
