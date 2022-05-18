@@ -115,7 +115,33 @@ li > button {
 
 .projects > button:hover {
     background-color: #776c94;
+    font-size: 14px;
 }
 .projects > button:active {
     background-color: #b0a1d8;
+    font-size: 13px;
+}
+
+.nav {
+    height: 32px;
+}
+
+.nav > button {
+    width: 100%;
+    letter-spacing: 1px;
+    font-weight: bold;
+    font-size: 14px;
+    border: none;
+    background-color: #504a68;
+    height: 32px;
+    color: #e6d9ff;
+}
+
+.nav > .return:hover {
+    background-color: #37374d;
+    font-size: 12px;
+}
+.nav > .return:active {
+    background-color: #b2b6ee;
+    font-size: 11px;
 }

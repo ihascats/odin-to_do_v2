@@ -5,7 +5,9 @@ import displayTaskInformation from "./display.task-information";
 function displayBundleTaskInformation(info){
     const projectsSelector = document.querySelector('.projects');
     projectsSelector.onclick = (event) => {
-
+        let returnButton = document.querySelector('.nav > button');
+        returnButton.textContent = "<< RETURN TO PROJECTS";
+        returnButton.classList.toggle('return');
         let selectedProject = displayProjectTasks(event, info, projectsSelector);
         let selectedProjectEvent = event;
         projectsSelector.onclick = (event) => {
