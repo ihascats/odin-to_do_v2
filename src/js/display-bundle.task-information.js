@@ -1,4 +1,5 @@
 import changeTaskInformation from "./change.task-information";
+import addNewTaskButton from "./display.new-task-button";
 import displayProjectTasks from "./display.project-tasks";
 import displayTaskInformation from "./display.task-information";
 
@@ -15,8 +16,9 @@ function displayBundleTaskInformation(info){
         returnButton.textContent = "<< RETURN TO PROJECTS";
         returnButton.classList.toggle('return');
         
-        let selectedProject = displayProjectTasks(event, info, projectsSelector);
-        let selectedProjectEvent = event;
+        let selectedProject = displayProjectTasks(project, info, projectsSelector);
+
+        addNewTaskButton(info, projectsSelector, selectedProject);
 
         
 
@@ -33,11 +35,13 @@ function displayBundleTaskInformation(info){
             })
             document.querySelector('.task').oninput = () =>{
                 changeTaskInformation(selectedTask);
-                selectedProject = displayProjectTasks(selectedProjectEvent, info, projectsSelector);
+                selectedProject = displayProjectTasks(project, info, projectsSelector);
+                addNewTaskButton(info, projectsSelector, selectedProject);
             }
             document.querySelector('.task').onclick = () =>{
                 changeTaskInformation(selectedTask);
-                selectedProject = displayProjectTasks(selectedProjectEvent, info, projectsSelector);
+                selectedProject = displayProjectTasks(project, info, projectsSelector);
+                addNewTaskButton(info, projectsSelector, selectedProject);
             }
 
         }

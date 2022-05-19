@@ -1,6 +1,6 @@
 import displayBundleTaskInformation from "./display-bundle.task-information";
 import newProjectButton from "./display.new-project-button";
-import displayProjects from "./display.projects";
+import displayProject from "./display.projects";
 
 function navigationButton(projectsSelector, info){
     document.querySelector('.nav').onclick = (event) => {
@@ -10,7 +10,7 @@ function navigationButton(projectsSelector, info){
             projectsSelector.firstElementChild.remove();
         }
         info.projects.forEach(project => {
-            displayProjects(project);
+            displayProject(project);
         });
         newProjectButton(info, projectsSelector)
         button.textContent = "PROJECTS";

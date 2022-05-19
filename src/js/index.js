@@ -3,7 +3,7 @@ import displayBundleTaskInformation from "./display-bundle.task-information";
 import { changeStatus } from "./display.list-item-status";
 import navigationButton from "./display.navigation-button";
 import newProjectButton from "./display.new-project-button";
-import displayProjects from "./display.projects";
+import displayProject from "./display.projects";
 import ProjectTaskInformation from "./information-holder.project-task-unions";
 
 const projectsSelector = document.querySelector('.projects')
@@ -41,7 +41,7 @@ let checkList = document.querySelector('.checkList');
 checkList.onclick = (event) => changeStatus(event);
 
 info.projects.forEach(project => {
-    displayProjects(project);
+    displayProject(project);
 })
 newProjectButton(info, projectsSelector);
 

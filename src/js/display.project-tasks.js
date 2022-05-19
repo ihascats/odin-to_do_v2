@@ -1,7 +1,6 @@
 import newElement from "./create.element";
 
-function displayProjectTasks(event, info, displayTo){
-    let button = event.target.closest('button');
+function displayProjectTasks(button, info, displayTo){
     if (!button || button == null) return
     while (displayTo.firstElementChild){
         displayTo.firstElementChild.remove()

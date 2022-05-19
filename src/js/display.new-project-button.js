@@ -1,5 +1,5 @@
 import newElement from "./create.element";
-import displayProjects from "./display.projects";
+import displayProject from "./display.projects";
 
 function newProjectButton(info, projectsSelector){
     let newButton = newElement('button', 'newProjectButton');
@@ -17,7 +17,16 @@ function newProjectButton(info, projectsSelector){
                     projectsSelector.firstElementChild.remove();
                 }
                 info.projects.forEach(project => {
-                    displayProjects(project);
+                    displayProject(project);
+                })
+                selfCall(info, projectsSelector);
+            }
+            if (event.key == "Escape"){
+                while (projectsSelector.firstElementChild){
+                    projectsSelector.firstElementChild.remove();
+                }
+                info.projects.forEach(project => {
+                    displayProject(project);
                 })
                 selfCall(info, projectsSelector);
             }
