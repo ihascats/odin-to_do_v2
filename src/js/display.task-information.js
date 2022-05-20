@@ -10,12 +10,44 @@ function displayTaskInformation(task){
                     query.firstElementChild.remove();
                 }
                 displayCheckList(task[key], query);
-                query.appendChild(listItemGenerator());
+                let itemGen = listItemGenerator();
+
+                itemGen.onclick = (event) => {
+                    let val = event.target.value;
+                    let input = event.target;
+                    if (val == '+'){
+                        event.target.value = '';
+                        document.onclick = (event) => {
+                            if (event.target != input)
+                            input.value = '+';
+                        }
+                    }
+                }
+                
+                itemGen.onkeydown = (event) => {
+                    let val = event.target.value;
+                    console.log(event.key)
+                    if (val == '+'){
+                        val = '';
+                    }
+                    if (event.key == "Enter" && val != ''){
+                        task.newListItem(val, false);
+                        selfCall(task)
+                    }
+                    if (event.key == "Escape"){
+                        event.target.value = '+';
+                    }
+                }
+                query.appendChild(itemGen);
             } else {
                 query.value = task[key];
             }
         }
     })
+}
+
+function selfCall(task){
+    displayTaskInformation(task);
 }
 
 function displayCheckList(checkList, element){
