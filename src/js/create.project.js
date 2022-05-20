@@ -6,7 +6,7 @@ class Project {
         this.tasks = [];
     }
 
-    newTask(title = "", description = "", dueDate = 'dd/mm/yyyy', priority = 0, checkList = {}, note = ""){
+    newTask(title = "", description = "", dueDate = '', priority = 0, checkList = {}, note = ""){
         let id = this.tasks.length;
         let task = new Task(id, title, description, dueDate, priority , checkList, note);
         this.tasks.push(task)

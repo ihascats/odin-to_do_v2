@@ -12,7 +12,7 @@ let info = new ProjectTaskInformation();
 info.newProject('Personal');
 info.newProject('Work');
 
-info.projects[0].newTask("PersonalTask", "Just something to test functionality", 'dd/mm/yyyy', 16, {
+info.projects[0].newTask("PersonalTask", "Just something to test functionality", '', 16, {
     0 : ['do something', true],
     1 : ['do something else', false],
     2 : ['do nothing', true],
@@ -21,7 +21,7 @@ info.projects[0].newTask("PersonalTask", "Just something to test functionality",
 }, "Something to do");
 info.projects[0].tasks[0].newListItem('cry', 'true')
 
-info.projects[0].newTask("PersonalTask2", "Just something to test functionality", 'dd/mm/yyyy', 16, {
+info.projects[0].newTask("PersonalTask2", "Just something to test functionality", '', 16, {
     0 : ['do something', true],
     1 : ['do something else', false],
     2 : ['do nothing', true],
@@ -29,7 +29,7 @@ info.projects[0].newTask("PersonalTask2", "Just something to test functionality"
     4 : ['do meth', true],
 }, "Something to do");
 
-info.projects[1].newTask("WorkTask", "Just something to test functionality", 'dd/mm/yyyy', 16, {
+info.projects[1].newTask("WorkTask", "Just something to test functionality", '', 16, {
     0 : ['do something', true],
     1 : ['do something else', false],
     2 : ['do nothing', true],

@@ -151,3 +151,11 @@ li > button {
     background-color: #b2b6ee;
     font-size: 11px;
 }
+
+.title {
+    width: 240px;
+}
+
+.dueDate {
+    width: fit-content;
+}

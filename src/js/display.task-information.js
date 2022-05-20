@@ -26,7 +26,6 @@ function displayTaskInformation(task){
                 
                 itemGen.onkeydown = (event) => {
                     let val = event.target.value;
-                    console.log(event.key)
                     if (val == '+'){
                         val = '';
                     }
