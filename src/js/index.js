@@ -48,4 +48,3 @@ newProjectButton(info, projectsSelector);
 displayBundleTaskInformation(info);
 
 navigationButton(projectsSelector, info);
-

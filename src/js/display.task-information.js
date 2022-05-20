@@ -38,6 +38,15 @@ function displayTaskInformation(task){
                     }
                 }
                 query.appendChild(itemGen);
+            } else if (key == "dueDate"){
+                if (task[key]){
+                    let year = task[key].getFullYear();
+                    let month = ('0' + task[key].getMonth()).slice(-2);
+                    let day = ('0' + task[key].getDate()).slice(-2);
+                    query.value = `${year}-${month}-${day}`
+                } else {
+                    query.value = '';    
+                }
             } else {
                 query.value = task[key];
             }

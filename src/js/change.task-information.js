@@ -18,8 +18,14 @@ function changeTaskInformation(task){
     classes.forEach(item => {
         let capitalized = item[0].toUpperCase() + item.slice(1).toLowerCase();
         if (task['change'+`${capitalized}`]){
-            let itemValue = document.querySelector(`.${item}`).value
-            task['change'+`${capitalized}`](itemValue)
+            if (item == "dueDate"){
+                let itemValue = document.querySelector(`.${item}`).value;
+                let date = new Date(itemValue);
+                task['change'+`${capitalized}`](date)
+            } else {
+                let itemValue = document.querySelector(`.${item}`).value
+                task['change'+`${capitalized}`](itemValue)
+            }
         }
     })
 
