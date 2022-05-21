@@ -13,6 +13,17 @@ function displayProjectTasks(button, info, displayTo){
                 let button = newElement('button', `${task.id}`);
                 document.querySelector('.projects').appendChild(button);
                 button.textContent = task.title;
+                if (task.priority == 1) {
+                    button.setAttribute('style', 'color: #00c3a0')
+                }
+                if (task.priority == 2) {
+                    button.setAttribute('style', 'color: #bfc300')
+                }
+                if (task.priority == 3) {
+                    button.setAttribute('style', 'color: #c34000')
+                }
+
+
             })
         }
     })

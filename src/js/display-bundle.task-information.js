@@ -29,7 +29,7 @@ function displayBundleTaskInformation(info){
             let selectedTask;
             selectedProject.tasks.forEach(task =>{
                 if (button.classList.contains(task.id)){
-                    displayTaskInformation(task)
+                    displayTaskInformation(task);
                     selectedTask = task;
                 }
             })
@@ -39,6 +39,12 @@ function displayBundleTaskInformation(info){
                 addNewTaskButton(info, projectsSelector, selectedProject);
             }
             document.querySelector('.task').onclick = () =>{
+                changeTaskInformation(selectedTask);
+                selectedProject = displayProjectTasks(project, info, projectsSelector);
+                addNewTaskButton(info, projectsSelector, selectedProject);
+            }
+            document.querySelector('.keyInfo').oninput = () => {
+                displayProjectTasks(project, info, projectsSelector);
                 changeTaskInformation(selectedTask);
                 selectedProject = displayProjectTasks(project, info, projectsSelector);
                 addNewTaskButton(info, projectsSelector, selectedProject);

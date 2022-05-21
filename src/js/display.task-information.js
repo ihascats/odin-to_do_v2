@@ -1,3 +1,4 @@
+import changeTaskInformation from "./change.task-information";
 import {newListItem, listItemGenerator } from "./create.newListItem";
 import displayStatus from "./display.list-item-status";
 
@@ -48,6 +49,11 @@ function displayTaskInformation(task){
                     query.value = '';    
                 }
             } else {
+                if (key == 'priority'){
+                    query.onchange = () => {
+                        changeTaskInformation(task);
+                    }
+                }
                 query.value = task[key];
             }
         }
@@ -63,10 +69,20 @@ function displayCheckList(checkList, element){
         let id = key;
         let text = checkList[key][0];
         let status = checkList[key][1];
-        const listItem = newListItem(id, status, text);
-        element.appendChild(listItem)
-        if (status){
-            displayStatus(listItem)
+        if (text!=''){
+            const listItem = newListItem(id, status, text);
+            listItem.onkeydown = (event)=>{
+                let li = event.target.closest('li');
+                checkList[li.classList[0]][0] = '';
+                if (!li || li == null) return
+                if (event.key == 'Delete'){
+                    li.remove();
+                }
+            }
+            element.appendChild(listItem)
+            if (status){
+                displayStatus(listItem)
+            }
         }
     })
 }

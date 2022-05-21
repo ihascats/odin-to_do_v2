@@ -37,6 +37,11 @@ function changeTaskInformation(task){
         let status = element.firstElementChild.classList[0];
         task.changeChecklist(id, text, status);
     })
+
+    const priorityElement = document.querySelector('.priority');
+    let priority = priorityElement.value;
+
+    task.changePriority(priority)
 }
 
 export default changeTaskInformation

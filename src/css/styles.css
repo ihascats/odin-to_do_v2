@@ -12,11 +12,47 @@
 
 .left {
     background-color: #BFA2DB;
-    width: 256px;
+    width: 384px;
 }
 
 .right {
     background-color: #7F7C82;
+    display: grid;
+    grid-template-rows: 1fr auto;
+}
+
+.keyInfo {
+    height: 104px;
+    background-color: #5a595e;
+    border-top: 2px solid #F0D9FF;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    align-items: center;
+    justify-content: center;
+}
+
+.keyInfo > button {
+    background-color: #776c94;
+    border: none;
+    border-radius: 2px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    height: 56px;
+    width: 256px;
+    border-right: 1px solid #F0D9FF;
+}
+
+.priority {
+    height: 56px;
+    width: 156px;
+	font-size: 12px;
+    font-weight: 900;
+    letter-spacing: 2px;
+	background-color: #776c94;
+	padding: 12px;
+    border: none;
+    border-radius: 2px;
+    text-align: center;
 }
 
 .task {
@@ -31,12 +67,14 @@
     grid-template-columns: 128px 1fr;
     gap: 16px;
     align-items: center;
+    height: fit-content;
 }
 
 .task-info {
     display: grid;
     grid-auto-rows: min-content;
     gap: 48px;
+    align-content: space-between;
 }
 
 .task-info > div {
@@ -74,7 +112,8 @@ input, textarea {
 }
 
 .task-info > div:nth-child(2){
-    max-height: 196px;
+    min-height: 192px;
+    max-height: 192px;
     overflow: auto;
 }
 
