@@ -2,6 +2,7 @@ import changeTaskInformation from "./change.task-information";
 import addNewTaskButton from "./display.new-task-button";
 import displayProjectTasks from "./display.project-tasks";
 import displayTaskInformation from "./display.task-information";
+import { clearFields, disableFields } from "./manage.input-fields";
 
 function displayBundleTaskInformation(info){
     const projectsSelector = document.querySelector('.projects');
@@ -50,14 +51,17 @@ function displayBundleTaskInformation(info){
             completeTaskElement.onclick = () => {
                 selectedTask.setCompleted();
                 bundleChange(info, projectsSelector, selectedProject, project, selectedTask)
+                clearFields();
+                disableFields();
             }
             deleteTaskElement.onclick = () => {
-                console.log("test")
                 let index = selectedProject.tasks.indexOf(selectedTask);
                 if ( index != -1){
                     selectedProject.tasks.splice(index, 1);
                 }
                 bundleChange(info, projectsSelector, selectedProject, project, selectedTask)
+                clearFields();
+                disableFields();
             }
             
             

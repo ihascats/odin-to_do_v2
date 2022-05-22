@@ -1,6 +1,7 @@
 import displayBundleTaskInformation from "./display-bundle.task-information";
 import newProjectButton from "./display.new-project-button";
 import displayProject from "./display.projects";
+import { clearFields, disableFields } from "./manage.input-fields";
 
 function navigationButton(projectsSelector, info){
     document.querySelector('.nav').onclick = (event) => {
@@ -15,7 +16,9 @@ function navigationButton(projectsSelector, info){
         newProjectButton(info, projectsSelector)
         button.textContent = "PROJECTS";
         button.classList.toggle('return');
-        displayBundleTaskInformation(info)
+        displayBundleTaskInformation(info);
+        clearFields();
+        disableFields();
     
     };
 }

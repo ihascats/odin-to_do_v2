@@ -153,14 +153,14 @@ ul > div > input {
     text-align: center;
 }
 
-input:disabled {
-    background-color: #967d78;
+input:disabled, textarea:disabled {
+    background-color: #69514c;
 }
 
 li > button {
     border: none;
     border-radius: 2px;
-    background-color: #be9a97;
+    background-color: #a36762;
     font-weight: 900;
 }
 

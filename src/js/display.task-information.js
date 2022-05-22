@@ -1,8 +1,10 @@
 import changeTaskInformation from "./change.task-information";
 import {newListItem, listItemGenerator } from "./create.newListItem";
 import displayStatus from "./display.list-item-status";
+import { enableFields } from "./manage.input-fields";
 
 function displayTaskInformation(task){
+    enableFields();
     Object.keys(task).forEach(key => {
         const query = document.querySelector(`.${key}`);
         if (query){

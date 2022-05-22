@@ -6,6 +6,7 @@ import navigationButton from "./display.navigation-button";
 import newProjectButton from "./display.new-project-button";
 import displayProject from "./display.projects";
 import ProjectTaskInformation from "./information-holder.project-task-unions";
+import { clearFields, disableFields } from "./manage.input-fields";
 
 const projectsSelector = document.querySelector('.projects')
 
@@ -26,3 +27,6 @@ displayBundleTaskInformation(info);
 navigationButton(projectsSelector, info);
 
 checkExpired(info);
+
+clearFields();
+disableFields();
