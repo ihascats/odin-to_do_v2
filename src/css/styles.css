@@ -24,7 +24,7 @@
 .keyInfo {
     height: 104px;
     background-color: #202020;
-    border-top: 2px solid #F0D9FF;
+    border-top: 2px solid #ab453d;
     display: grid;
     grid-template-columns: auto auto auto;
     align-items: center;
@@ -39,7 +39,7 @@
     letter-spacing: 2px;
     height: 56px;
     width: 256px;
-    border-right: 1px solid #F0D9FF;
+    border-right: 1px solid #ab453d;
 }
 
 .keyInfo > button:hover {
