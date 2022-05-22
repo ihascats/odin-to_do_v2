@@ -13,6 +13,7 @@
 .left {
     background-color: #ab453d;
     width: 384px;
+    overflow: auto;
 }
 
 .right {

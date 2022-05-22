@@ -12,6 +12,7 @@ function newProjectButton(info, projectsSelector){
         newButton.onclick = null;
         newButton.onkeydown = (event) => {
             if (event.key == "Enter"){
+                if (button.firstElementChild.value == '') return
                 info.newProject(button.firstElementChild.value);
                 while (projectsSelector.firstElementChild){
                     projectsSelector.firstElementChild.remove();
