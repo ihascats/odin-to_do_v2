@@ -42,6 +42,24 @@
     border-right: 1px solid #F0D9FF;
 }
 
+.keyInfo > button:hover {
+    background-color: #504a68;
+    font-size: 12px;
+}
+
+.keyInfo > button:active {
+    background-color: #9886b6;
+}
+
+.keyInfo > select:hover {
+    background-color: #504a68;
+    font-size: 11px;
+}
+
+.keyInfo > select:active {
+    background-color: #9886b6;
+}
+
 .priority {
     height: 56px;
     width: 156px;
@@ -158,6 +176,9 @@ li > button {
     border: none;
     background-color: #9886b6;
     height: 32px;
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    align-items: center;
 }
 
 .projects > button:hover {
