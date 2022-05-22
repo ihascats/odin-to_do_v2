@@ -15,13 +15,13 @@ function displayProjectTasks(button, info, displayTo){
                     document.querySelector('.projects').appendChild(button);
                     button.textContent = task.title;
                     if (task.priority == 1) {
-                        button.setAttribute('style', 'color: #00c3a0')
+                        button.setAttribute('style', 'color: #83d7d3')
                     }
                     if (task.priority == 2) {
-                        button.setAttribute('style', 'color: #bfc300')
+                        button.setAttribute('style', 'color: #cecf90')
                     }
                     if (task.priority == 3) {
-                        button.setAttribute('style', 'color: #c34000')
+                        button.setAttribute('style', 'color: #ff6d6d')
                     }
                 }
 

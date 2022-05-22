@@ -11,19 +11,19 @@
 }
 
 .left {
-    background-color: #BFA2DB;
+    background-color: #ab453d;
     width: 384px;
 }
 
 .right {
-    background-color: #7F7C82;
+    background-color: #363636;
     display: grid;
     grid-template-rows: 1fr auto;
 }
 
 .keyInfo {
     height: 104px;
-    background-color: #5a595e;
+    background-color: #202020;
     border-top: 2px solid #F0D9FF;
     display: grid;
     grid-template-columns: auto auto auto;
@@ -32,7 +32,7 @@
 }
 
 .keyInfo > button {
-    background-color: #776c94;
+    background-color: #822328;
     border: none;
     border-radius: 2px;
     font-weight: 900;
@@ -43,21 +43,21 @@
 }
 
 .keyInfo > button:hover {
-    background-color: #504a68;
+    background-color: #5b0010;
     font-size: 12px;
 }
 
 .keyInfo > button:active {
-    background-color: #9886b6;
+    background-color: #9c2a30;
 }
 
 .keyInfo > select:hover {
-    background-color: #504a68;
+    background-color: #5b0010;
     font-size: 11px;
 }
 
 .keyInfo > select:active {
-    background-color: #9886b6;
+    background-color: #9c2a30;
 }
 
 .priority {
@@ -66,7 +66,7 @@
 	font-size: 12px;
     font-weight: 900;
     letter-spacing: 2px;
-	background-color: #776c94;
+	background-color: #822328;
 	padding: 12px;
     border: none;
     border-radius: 2px;
@@ -106,7 +106,7 @@ label {
     letter-spacing: 1px;
     font-weight: 900;
     font-size: 12px;
-    color: #F0D9FF;
+    color: #b2948e;
 }
 
 input {
@@ -116,7 +116,7 @@ input {
 input, textarea {
     border: none;
     border-radius: 2px;
-    background-color: #F0D9FF;
+    background-color: #b2948e;
     padding: 4px;
     color: rgb(32, 32, 32);
     letter-spacing: 0px;
@@ -154,13 +154,13 @@ ul > div > input {
 }
 
 input:disabled {
-    background-color: #aea2c0;
+    background-color: #967d78;
 }
 
 li > button {
     border: none;
     border-radius: 2px;
-    background-color: #e6d9ff;
+    background-color: #be9a97;
     font-weight: 900;
 }
 
@@ -174,19 +174,20 @@ li > button {
     font-weight: bold;
     font-size: 16px;
     border: none;
-    background-color: #9886b6;
+    background-color: #561418;
     height: 32px;
     display: grid;
     grid-template-columns: 1fr auto auto;
     align-items: center;
+    color: #dbb1b1;
 }
 
 .projects > button:hover {
-    background-color: #776c94;
+    background-color: rgb(61, 0, 11);
     font-size: 14px;
 }
 .projects > button:active {
-    background-color: #b0a1d8;
+    background-color: #9c2a30;
     font-size: 13px;
 }
 
@@ -200,17 +201,17 @@ li > button {
     font-weight: bold;
     font-size: 14px;
     border: none;
-    background-color: #504a68;
+    background-color: #320000;
     height: 32px;
-    color: #e6d9ff;
+    color: #b2948e;
 }
 
 .nav > .return:hover {
-    background-color: #37374d;
+    background-color: #200000;
     font-size: 12px;
 }
 .nav > .return:active {
-    background-color: #b2b6ee;
+    background-color: #580000;
     font-size: 11px;
 }
 
