@@ -10,7 +10,7 @@ function displayProjectTasks(button, info, displayTo){
         if (project.title == button.textContent){
             selectedProject = project;
             project.tasks.forEach(task => {
-                if (!task.completed){
+                if (!task.completed && !task.expired){
                     let button = newElement('button', `${task.id}`);
                     document.querySelector('.projects').appendChild(button);
                     button.textContent = task.title;

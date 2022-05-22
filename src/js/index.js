@@ -1,4 +1,5 @@
 import "../css/styles.css";
+import checkExpired from "./change.task-expired";
 import displayBundleTaskInformation from "./display-bundle.task-information";
 import { changeStatus } from "./display.list-item-status";
 import navigationButton from "./display.navigation-button";
@@ -48,3 +49,5 @@ newProjectButton(info, projectsSelector);
 displayBundleTaskInformation(info);
 
 navigationButton(projectsSelector, info);
+
+checkExpired(info);
