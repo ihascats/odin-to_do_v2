@@ -81,6 +81,7 @@
     display: grid;
     grid-template-rows: 16px 1fr;
     gap: 6px;
+    align-items: start;
 }
 
 label {
@@ -122,6 +123,7 @@ li {
     grid-template-columns:min-content 1fr;
     list-style: none;
     gap: 4px;
+    height: fit-content;
 }
 
 li > button {

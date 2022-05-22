@@ -7,6 +7,8 @@ class Task{
         this.priority = priority;
         this.checkList = checkList;
         this.note = note;
+        this.completed = false;
+        this.expired = false;
     }
 
     changeId(newId){
@@ -40,6 +42,14 @@ class Task{
     newListItem(task, status){
         let id = Object.keys(this.checkList).length;
         this.checkList[id] = [task, status];
+    }
+
+    setCompleted(){
+        this.completed = true;
+    }
+
+    setExpired(){
+        this.expired = true;
     }
     
 }

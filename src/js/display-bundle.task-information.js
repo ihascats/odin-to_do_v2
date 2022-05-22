@@ -34,24 +34,42 @@ function displayBundleTaskInformation(info){
                 }
             })
             document.querySelector('.task').oninput = () =>{
-                changeTaskInformation(selectedTask);
-                selectedProject = displayProjectTasks(project, info, projectsSelector);
-                addNewTaskButton(info, projectsSelector, selectedProject);
+                bundleChange(info, projectsSelector, selectedProject, project, selectedTask)
             }
             document.querySelector('.task').onclick = () =>{
-                changeTaskInformation(selectedTask);
-                selectedProject = displayProjectTasks(project, info, projectsSelector);
-                addNewTaskButton(info, projectsSelector, selectedProject);
+                bundleChange(info, projectsSelector, selectedProject, project, selectedTask)
             }
-            document.querySelector('.keyInfo').oninput = () => {
+
+            const keyInfoElement = document.querySelector('.keyInfo');
+            const completeTaskElement = keyInfoElement.firstElementChild;
+            const deleteTaskElement = keyInfoElement.childNodes[3];
+            keyInfoElement.oninput = () => {
                 displayProjectTasks(project, info, projectsSelector);
-                changeTaskInformation(selectedTask);
-                selectedProject = displayProjectTasks(project, info, projectsSelector);
-                addNewTaskButton(info, projectsSelector, selectedProject);
+                bundleChange(info, projectsSelector, selectedProject, project, selectedTask)
             }
+            completeTaskElement.onclick = () => {
+                selectedTask.setCompleted();
+                bundleChange(info, projectsSelector, selectedProject, project, selectedTask)
+            }
+            deleteTaskElement.onclick = () => {
+                console.log("test")
+                let index = selectedProject.tasks.indexOf(selectedTask);
+                if ( index != -1){
+                    selectedProject.tasks.splice(index, 1);
+                }
+                bundleChange(info, projectsSelector, selectedProject, project, selectedTask)
+            }
+            
+            
 
         }
     };
+}
+
+function bundleChange(info, projectsSelector, selectedProject, project, selectedTask){
+    changeTaskInformation(selectedTask);
+    selectedProject = displayProjectTasks(project, info, projectsSelector);
+    addNewTaskButton(info, projectsSelector, selectedProject);
 }
 
 export default displayBundleTaskInformation
