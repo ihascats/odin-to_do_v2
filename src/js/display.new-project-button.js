@@ -12,7 +12,14 @@ function newProjectButton(info, projectsSelector){
         newButton.onclick = null;
         newButton.onkeydown = (event) => {
             if (event.key == "Enter"){
-                if (button.firstElementChild.value == '') return
+                let existing = false;
+                info.projects.forEach(project => {
+                    console.log(project.title)
+                    if (button.firstElementChild.value == project.title){
+                        existing = true
+                    }
+                })
+                if (button.firstElementChild.value == '' || existing) return
                 info.newProject(button.firstElementChild.value);
                 while (projectsSelector.firstElementChild){
                     projectsSelector.firstElementChild.remove();
