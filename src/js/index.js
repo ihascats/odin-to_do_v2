@@ -40,3 +40,6 @@ window.onclick = () => {
 window.oninput = () => {
     info.localStorageFormat()
 }
+window.onkeydown = () => {
+    info.localStorageFormat()
+}
