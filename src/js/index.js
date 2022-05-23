@@ -37,3 +37,6 @@ disableFields();
 window.onclick = () => {
     info.localStorageFormat()
 }
+window.oninput = () => {
+    info.localStorageFormat()
+}
