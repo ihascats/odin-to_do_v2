@@ -4,7 +4,6 @@ function checkExpired(info){
         currentDate.setHours(0,0,0,0);
         info.projects.forEach(project => {
             project.tasks.forEach(task => {
-                console.log(task.dueDate.getTime() == 0 )
                 if (task.dueDate && task.dueDate.getTime() != 0)
                 if (task.dueDate.getTime() < currentDate.getTime()){
                     task.setExpired();

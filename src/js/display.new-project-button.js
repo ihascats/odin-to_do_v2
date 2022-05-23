@@ -14,7 +14,6 @@ function newProjectButton(info, projectsSelector){
             if (event.key == "Enter"){
                 let existing = false;
                 info.projects.forEach(project => {
-                    console.log(project.title)
                     if (button.firstElementChild.value == project.title){
                         existing = true
                     }
