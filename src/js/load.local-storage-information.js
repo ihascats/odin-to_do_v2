@@ -20,7 +20,7 @@ function loadLocalStorage(info){
             })
             let title = parsedProject[task]['title']
             let description = parsedProject[task]['description']
-            let dueDate = parsedProject[task]['dueDate'].slice(0, -3);
+            let dueDate = parsedProject[task]['dueDate'];
             dueDate = new Date(dueDate);
             let priority = parsedProject[task]['priority']
             let checkList = parsedProject[task]['checkList']
