@@ -19,7 +19,6 @@ function navigationButton(projectsSelector, info){
         displayBundleTaskInformation(info);
         clearFields();
         disableFields();
-    
     };
 }
 

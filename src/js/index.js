@@ -6,13 +6,16 @@ import navigationButton from "./display.navigation-button";
 import newProjectButton from "./display.new-project-button";
 import displayProject from "./display.projects";
 import ProjectTaskInformation from "./information-holder.project-task-unions";
+import loadLocalStorage from "./load.local-storage-information";
 import { clearFields, disableFields } from "./manage.input-fields";
 
 const projectsSelector = document.querySelector('.projects')
 
 let info = new ProjectTaskInformation();
-info.newProject('Personal');
-info.newProject('Work');
+info.newProject('Personal')
+info.newProject('Work')
+
+loadLocalStorage(info);
 
 let checkList = document.querySelector('.checkList');
 checkList.onclick = (event) => changeStatus(event);
@@ -30,3 +33,7 @@ checkExpired(info);
 
 clearFields();
 disableFields();
+
+window.onclick = () => {
+    info.localStorageFormat()
+}
